@@ -98,7 +98,7 @@ body {
 }
 
 .hero-image {
-    width: 100%;
+    width: 160%;
     height: 300px;
     object-fit: cover;
     display: block;
@@ -154,52 +154,62 @@ body {
 
 /* Sidebar */
 .about-author {
-    background-color: rgba(255,255,255,0.5);
+    margin-top: 340px;
+    background: #444;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 550px;
+    /* color: white; */
+    /* background-color: ; */
 }
 
 .about-author h3 {
-    font-size: 14px;
-    color: #333;
+    /* font-size: 14px; */
+    color: white;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
 .author-info {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 45px; */
     margin-bottom: 20px;
+    height: 90%;
 }
 
 .profile-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    /* border-radius: 50%; */
     object-fit: cover;
     background-color: #ddd;
 }
 
 .author-text p {
     font-size: 13px;
-    color: #666;
+    color: whitesmoke;
     margin-bottom: 10px;
     line-height: 1.5;
 }
 
 .social-links {
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
+    width: 100%;
+    justify-content: space-between;
 }
 
-.social-icon {
-    width: 30px;
-    height: 30px;
+/* .social-icon {
+    width: 50px;
+    height: 50px;
     border-radius: 4px;
     display: block;
     transition: opacity 0.3s;
-}
+} */
 
 .social-icon:hover {
     opacity: 0.8;

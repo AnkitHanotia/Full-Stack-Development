@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankit Hanotia | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/yourkit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Ankit Hanotia</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="mode-toggle">🌙</button>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Ankit Hanotia</span></h1>
+        <p>
+          Software Developer | MERN Stack Enthusiast | Competitive Programmer
+        </p>
+        <div class="cta-buttons">
+          <a href="ANKITHANOTIA_2022ucp1592.pdf" class="btn">Download Resume</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        B.Tech Computer Science & Engineering student at MNIT Jaipur with a
+        passion for developing scalable software solutions and solving
+        competitive programming challenges.
+      </p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <h3>Node-Based Image Processor</h3>
+          <p>
+            Web-based image processing tool using React, Flask, and DAG
+            execution engine for optimized workflows.
+          </p>
+          <a
+            href="https://github.com/AnkitHanotia/Node_Based_Editor"
+            target="_blank"
+            >GitHub</a
+          >
+          <a href="https://node-based-editor.vercel.app/" target="_blank"
+            >Live Demo</a
+          >
+        </div>
+        <div class="card">
+          <h3>Olympic Analysis WebApp</h3>
+          <p>
+            Data analysis and visualization of 120 years of Olympic Games using
+            Python, Pandas, and Streamlit.
+          </p>
+          <a
+            href="https://github.com/AnkitHanotia/Olympic-Analysis-WebApp"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://olympic-analysis-webapp-8luzuhphar39aouxn2w8av.streamlit.app/"
+            target="_blank"
+            >Live Demo</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>C/C++, Python, SQL, JavaScript</li>
+        <li>React, Node.js, Flask, MySQL</li>
+        <li>Pandas, OpenCV, Matplotlib</li>
+        <li>Git, Postman, Tailwind, Bootstrap</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="socials">
+        <a
+          href="https://linkedin.com/in/ankit-hanotia-068781252"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/AnkitHanotia" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="mailto:hanotiaankit04@gmail.com"
+          ><i class="fas fa-envelope"></i
+        ></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ankit Hanotia | Built with ❤️ using HTML & CSS</p>
+    </footer>
+
+    <script>
+      const toggleBtn = document.getElementById("mode-toggle");
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        toggleBtn.textContent = document.body.classList.contains("dark-mode")
+          ? "☀️"
+          : "🌙";
+      });
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .querySelector(this.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
