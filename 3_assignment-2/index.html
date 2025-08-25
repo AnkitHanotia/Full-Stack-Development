@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>🛒 Grocery Store</header>
+
+    <main>
+      <section class="products">
+        <h2>Available Groceries</h2>
+        <div class="product-list">
+          <div class="product">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/415/415682.png"
+              alt="Apple"
+            />
+            <p>Apple</p>
+            <button
+              onclick="addToCart('Apple', 'https://cdn-icons-png.flaticon.com/512/415/415682.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/766/766149.png"
+              alt="Milk"
+            />
+            <p>Milk</p>
+            <button
+              onclick="addToCart('Milk', 'https://cdn-icons-png.flaticon.com/512/766/766149.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2909/2909763.png"
+              alt="Bread"
+            />
+            <p>Bread</p>
+            <button
+              onclick="addToCart('Bread', 'https://cdn-icons-png.flaticon.com/512/2909/2909763.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="product">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3144/3144037.png"
+              alt="Eggs"
+            />
+            <p>Eggs</p>
+            <button
+              onclick="addToCart('Eggs', 'https://cdn-icons-png.flaticon.com/512/3144/3144037.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cart">
+        <h2>My Cart</h2>
+        <ul id="cart-items"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
