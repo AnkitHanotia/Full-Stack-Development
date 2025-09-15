@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="app-header">
+        <h1>Code Player</h1>
+        <div class="header-actions">
+            <button id="btn-clear" title="Clear all editors">Clear</button>
+            <button id="btn-run" title="Run now (Ctrl+Enter)">Run</button>
+        </div>
+    </header>
+
+    <main class="grid">
+        <section class="panel" id="panel-html">
+            <div class="panel-header">HTML</div>
+            <textarea id="editor-html" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off"></textarea>
+        </section>
+        <section class="panel" id="panel-css">
+            <div class="panel-header">CSS</div>
+            <textarea id="editor-css" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off"></textarea>
+        </section>
+        <section class="panel" id="panel-js">
+            <div class="panel-header">JavaScript</div>
+            <textarea id="editor-js" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off"></textarea>
+        </section>
+        <section class="panel" id="panel-output">
+            <div class="panel-header">Output</div>
+            <iframe id="preview" title="Live Output" sandbox="allow-scripts allow-same-origin"></iframe>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <span>Type in the editors to see live output. Press Ctrl+Enter to run immediately.</span>
+    </footer>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
+
+
