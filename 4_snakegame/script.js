@@ -174,7 +174,7 @@ class SnakeGame {
       this.score += this.currentFoodType.points;
       this.updateScore();
       this.food = this.generateFood();
-      this.speed = Math.max(40, this.speed - 1);
+      this.speed = Math.max(50, this.speed - 1);
     } else {
       this.snake.pop();
     }
