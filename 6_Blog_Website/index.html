@@ -1,110 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Blog Manager</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="app-header">
-        <h1>Simple Blog Manager</h1>
-        <button id="newPostBtn" class="btn primary">New Post</button>
+      <h1>Simple Blog Manager</h1>
+      <button id="newPostBtn" class="btn primary">New Post</button>
     </header>
-
     <main class="container">
-        <section class="editor-panel" id="editorPanel" aria-live="polite">
-            <h2 id="formTitle">Create Post</h2>
-            <form id="postForm" autocomplete="off">
-                <input type="hidden" id="postId">
+      <section class="editor-panel" id="editorPanel" aria-live="polite">
+        <h2 id="formTitle">Create Post</h2>
+        <form id="postForm" autocomplete="off">
+          <input type="hidden" id="postId" />
 
-                <div class="field">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" placeholder="Enter a descriptive title" required>
-                </div>
+          <div class="field">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              id="title"
+              placeholder="Enter a descriptive title"
+              required
+            />
+          </div>
 
-                <div class="field duo">
-                    <div>
-                        <label for="author">Author</label>
-                        <input type="text" id="author" placeholder="Your name" required>
-                    </div>
-                    <div>
-                        <label for="date">Date</label>
-                        <input type="date" id="date" required>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label for="content">Content</label>
-                    <textarea id="content" rows="8" placeholder="Write your blog content here..." required></textarea>
-                </div>
-
-                <div class="actions">
-                    <button type="submit" class="btn primary" id="saveBtn">Save</button>
-                    <button type="button" class="btn" id="cancelEditBtn">Cancel</button>
-                </div>
-            </form>
-        </section>
-
-        <section class="list-panel">
-            <div class="toolbar">
-                <div class="tabs">
-                    <button class="tab active" data-filter="all">All</button>
-                    <button class="tab" data-filter="published">Published</button>
-                    <button class="tab" data-filter="drafts">Drafts</button>
-                </div>
-                <div class="search">
-                    <input type="search" id="searchInput" placeholder="Search by title or author">
-                </div>
+          <div class="field duo">
+            <div>
+              <label for="author">Author</label>
+              <input type="text" id="author" placeholder="Your name" required />
             </div>
+            <div>
+              <label for="date">Date</label>
+              <input type="date" id="date" required />
+            </div>
+          </div>
 
-            <ul id="postList" class="post-list" aria-live="polite"></ul>
-            <p id="emptyState" class="empty-state">No posts yet. Create your first one!</p>
-        </section>
+          <div class="field">
+            <label for="content">Content</label>
+            <textarea
+              id="content"
+              rows="8"
+              placeholder="Write your blog content here..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary" id="saveBtn">Save</button>
+            <button type="button" class="btn" id="cancelEditBtn">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="list-panel">
+        <div class="toolbar">
+          <div class="tabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="published">Published</button>
+            <button class="tab" data-filter="drafts">Drafts</button>
+          </div>
+          <div class="search">
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search by title or author"
+            />
+          </div>
+        </div>
+
+        <ul id="postList" class="post-list" aria-live="polite"></ul>
+        <p id="emptyState" class="empty-state">
+          No posts yet. Create your first one!
+        </p>
+      </section>
     </main>
 
     <template id="postItemTemplate">
-        <li class="post-card">
-            <div class="post-meta">
-                <h3 class="post-title"></h3>
-                <div class="sub">
-                    <span class="author"></span>
-                    <span class="dot">•</span>
-                    <time class="date"></time>
-                    <span class="dot">•</span>
-                    <span class="status"></span>
-                </div>
-            </div>
-            <p class="post-content"></p>
-            <div class="post-actions">
-                <button class="btn small" data-action="edit">Edit</button>
-                <button class="btn small warn" data-action="delete">Delete</button>
-                <button class="btn small success" data-action="toggle-publish">Publish</button>
-            </div>
-        </li>
+      <li class="post-card">
+        <div class="post-meta">
+          <h3 class="post-title"></h3>
+          <div class="sub">
+            <span class="author"></span>
+            <span class="dot">•</span>
+            <time class="date"></time>
+            <span class="dot">•</span>
+            <span class="status"></span>
+          </div>
+        </div>
+        <p class="post-content"></p>
+        <div class="post-actions">
+          <button class="btn small" data-action="edit">Edit</button>
+          <button class="btn small warn" data-action="delete">Delete</button>
+          <button class="btn small success" data-action="toggle-publish">
+            Publish
+          </button>
+        </div>
+      </li>
     </template>
 
     <footer class="app-footer">
-        <p>Local-only demo. Data saved in your browser.</p>
+      <p>Local-only demo. Data saved in your browser.</p>
     </footer>
 
     <script src="app.js"></script>
     <script>
-        // Initialize default date to today for convenience
-        (function() {
-            const dateInput = document.getElementById('date');
-            if (dateInput) {
-                const today = new Date();
-                const yyyy = today.getFullYear();
-                const mm = String(today.getMonth() + 1).padStart(2, '0');
-                const dd = String(today.getDate()).padStart(2, '0');
-                dateInput.value = `${yyyy}-${mm}-${dd}`;
-            }
-        })();
+      // Initialize default date to today for convenience
+      (function () {
+        const dateInput = document.getElementById("date");
+        if (dateInput) {
+          const today = new Date();
+          const yyyy = today.getFullYear();
+          const mm = String(today.getMonth() + 1).padStart(2, "0");
+          const dd = String(today.getDate()).padStart(2, "0");
+          dateInput.value = `${yyyy}-${mm}-${dd}`;
+        }
+      })();
     </script>
-</body>
+  </body>
 </html>
-

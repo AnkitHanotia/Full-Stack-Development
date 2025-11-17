@@ -7,7 +7,6 @@ class SnakeGame {
     this.gridSize = 20;
     this.tileCount = this.canvas.width / this.gridSize;
 
-    // Game state
     this.gameRunning = false;
     this.gamePaused = false;
     this.score = 0;

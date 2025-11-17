@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sign Up</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<main class="container">
+		<section class="card" aria-labelledby="signup-title">
+			<h1 id="signup-title">Create your account</h1>
+			<p class="subtitle">Sign up to get started</p>
+
+			<form id="signupForm" novalidate>
+				<div class="grid">
+					<div class="form-control">
+						<label for="firstName">First name</label>
+						<input type="text" id="firstName" name="firstName" autocomplete="given-name" required aria-describedby="firstNameHelp firstNameError" />
+						<small id="firstNameHelp" class="hint">Enter your given name.</small>
+						<div class="error" id="firstNameError" role="alert" aria-live="polite"></div>
+					</div>
+					<div class="form-control">
+						<label for="lastName">Last name</label>
+						<input type="text" id="lastName" name="lastName" autocomplete="family-name" required aria-describedby="lastNameHelp lastNameError" />
+						<small id="lastNameHelp" class="hint">Enter your family name.</small>
+						<div class="error" id="lastNameError" role="alert" aria-live="polite"></div>
+					</div>
+				</div>
+
+				<div class="form-control">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" autocomplete="email" required aria-describedby="emailHelp emailError" />
+					<small id="emailHelp" class="hint">We will send a confirmation email.</small>
+					<div class="error" id="emailError" role="alert" aria-live="polite"></div>
+				</div>
+
+				<div class="form-control">
+					<label for="phone">Phone</label>
+					<input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" aria-describedby="phoneHelp phoneError" />
+					<small id="phoneHelp" class="hint">Optional. Digits, spaces, +, -, ( ) allowed.</small>
+					<div class="error" id="phoneError" role="alert" aria-live="polite"></div>
+				</div>
+
+				<div class="form-control">
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" autocomplete="new-password" required aria-describedby="passwordHelp passwordError" />
+					<small id="passwordHelp" class="hint">Min 8 chars, with upper, lower, number, and symbol.</small>
+					<div class="error" id="passwordError" role="alert" aria-live="polite"></div>
+				</div>
+
+				<div class="form-control">
+					<label for="confirmPassword">Confirm password</label>
+					<input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" required aria-describedby="confirmPasswordError" />
+					<div class="error" id="confirmPasswordError" role="alert" aria-live="polite"></div>
+				</div>
+
+				<fieldset class="form-control">
+					<legend>Gender</legend>
+					<div class="choices" aria-describedby="genderError">
+						<label><input type="radio" name="gender" value="female" /> Female</label>
+						<label><input type="radio" name="gender" value="male" /> Male</label>
+						<label><input type="radio" name="gender" value="other" /> Other</label>
+					</div>
+					<div class="error" id="genderError" role="alert" aria-live="polite"></div>
+				</fieldset>
+
+				<div class="form-control inline">
+					<label class="checkbox">
+						<input type="checkbox" id="terms" name="terms" aria-describedby="termsError" />
+						<span>I agree to the Terms and Privacy Policy</span>
+					</label>
+					<div class="error" id="termsError" role="alert" aria-live="polite"></div>
+				</div>
+
+				<button type="submit" class="btn-primary">Create account</button>
+				<p class="success" id="formSuccess" role="status" aria-live="polite" hidden>Account created successfully!</p>
+			</form>
+		</section>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
